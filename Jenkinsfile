@@ -39,11 +39,6 @@ pipeline{
             }
         }
         
-         stage('Maven Test') {
-            steps {
-                sh "mvn clean test"
-            }
-        }
 
         stage('Build Image') {
             steps {
