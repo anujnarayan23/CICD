@@ -47,7 +47,7 @@ pipeline{
 
         stage('Build Image') {
             steps {
-              sh 'docker login testjfrogd.jfrog.io -u anunarayan@deloitte.com -p Test@0987'
+              
               sh 'docker build -t "my-image:${IMAGE_TAG}" .'
               sh 'docker tag "my-image:${IMAGE_TAG}" testjfrogd.jfrog.io/default-docker-virtual/"my-image:${IMAGE_TAG}"'
               sh 'docker push testjfrogd.jfrog.io/default-docker-virtual/"my-image:${IMAGE_TAG}"'
