@@ -7,12 +7,6 @@ pipeline{
     }
 
     stages {
-
-        stage('Git Scm') {
-            steps {
-                git 'https://github.com/satyakumr/java-cobrand-demo'
-            }
-        }
         
         stage ('Artifactory Configuration') {
             steps {
