@@ -39,7 +39,7 @@ pipeline{
             }
         }
         
-        stage('Maven build') {
+        stage('Maven Test') {
             steps {
                 sh "mvn clean test"
             }
