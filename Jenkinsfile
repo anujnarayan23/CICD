@@ -63,11 +63,7 @@ pipeline{
                 }
                 }
             }
-        // stage('Remove Unused docker image') {
-        // steps{
-        //     sh "docker rmi my-image:${IMAGE_TAG}"
-        // }
-        // }
+        
         stage('Deploy Dev') {
             input{
                     message "Deploy to Dev?"
@@ -87,6 +83,6 @@ pipeline{
     post {
     always {
         emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
-    }
-}
-}           
+			}
+	}
+} 
