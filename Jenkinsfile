@@ -35,16 +35,10 @@ pipeline{
 
         stage('Maven build') {
             steps {
-                sh "mvn clean package"
+                sh "mvn -Dmaven.test.skip=true clean package"
             }
         }
-        
-        stage('Maven Test') {
-            steps {
-                sh "mvn clean test"
-            }
-        }
-        
+             
 
         stage('Build Image') {
             steps {
